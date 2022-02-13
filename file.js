@@ -2,7 +2,7 @@
     "Date": "2022-02-12T11:30:00+03:00",
     "PreviousDate": "2022-02-11T11:30:00+03:00",
     "PreviousURL": "\/\/www.cbr-xml-daily.ru\/archive\/2022\/02\/11\/daily_json.js",
-    "Timestamp": "2022-02-13T16:00:00+03:00",
+    "Timestamp": "2022-02-13T19:00:00+03:00",
     "Valute": {
         "AUD": {
             "ID": "R01010",
