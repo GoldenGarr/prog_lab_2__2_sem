@@ -383,4 +383,8 @@ fstream
 -
 json.hpp
 /Users/maksim/CLionProjects/lab2_cpp/json.hpp
+thread
+-
+algorithm
+-
 

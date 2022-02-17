@@ -7346,7 +7346,7 @@ f = std::strtold(str, endptr);
     from the grammar described in RFC 8259. Starting in state "init", the
     input is read and used to determined the next state. Only state "done"
     accepts the number. State "error" is a trap state to model errors. In the
-    table below, "anything" means any character but the ones listed before.
+    global_table below, "anything" means any character but the ones listed before.
 
     state    | 0        | 1-9      | e E      | +       | -       | .        | anything
     ---------|----------|----------|----------|---------|---------|----------|-----------
@@ -15215,7 +15215,7 @@ return {diyfp::normalize(v), w_minus, w_plus};
 //
 //      2^(q - 2 + alpha) <= c * w < 2^(q + gamma)
 //
-// The choice of (alpha,gamma) determines the size of the table and the form of
+// The choice of (alpha,gamma) determines the size of the global_table and the form of
 // the digit generation procedure. Using (alpha,gamma)=(-60,-32) works out well
 // in practice:
 //
@@ -15311,11 +15311,11 @@ inline cached_power get_cached_power_for_binary_exponent(int e)
 // k in this range. For each such k it suffices to find a cached power
 // such that the exponent of the product lies in [alpha,gamma].
 // This implies that the difference of the decimal exponents of adjacent
-// table entries must be less than or equal to
+// global_table entries must be less than or equal to
 //
 //      floor( (gamma - alpha) * log_10(2) ) = 8.
 //
-// (A smaller distance gamma-alpha would require a larger table.)
+// (A smaller distance gamma-alpha would require a larger global_table.)
 
 // NB:
 // Actually this function returns c, such that -60 <= e_c + e + 64 <= -34.
